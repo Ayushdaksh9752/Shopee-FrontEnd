@@ -1,6 +1,6 @@
 import React from "react";
 import "./CSS/LoginSignUp.css";
-import { useState ,localStorage} from "react";
+import { useState} from "react";
 export const LoginSignUp = () => {
   const [state, setState] = useState("Login");
   const [formData, setFormData] = useState({
@@ -26,7 +26,7 @@ export const LoginSignUp = () => {
       .then((data) => (responseData = data));
 
     if (responseData.success) {
-      localStorage.setItem("auth-token", responseData.token);
+      // localStorage.setItem("auth-token", responseData.token);
       window.location.replace("/");
     }
     else{
@@ -48,7 +48,7 @@ export const LoginSignUp = () => {
       .then((data) => (responseData = data));
 
     if (responseData.success) {
-      localStorage.setItem("auth-token", responseData.token);
+      // localStorage.setItem("auth-token", responseData.token);
       window.location.replace("/");
     }
     else{
